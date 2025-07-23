@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Info Form</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-image: url("/static/zenitsu-agatsuma.png");
+            background-size: cover;               /* Covers full screen */
+            background-repeat: no-repeat;         /* No repetition */
+            background-position: center center;   /* Centered */
+            background-attachment: fixed;         /* Stays fixed while scrolling */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            display: flex;
+        }
+        .form-container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            width: 400px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 10px 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            margin-top: 15px;
+            width: 100%;
+            background-color: #f5a623;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e69500;
+        }
+        .label-text {
+            color : black;
+        }
+        #form-data{
+            margin-left : 30px;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST">
+        <div id="form-data">
+            <h2>Enter Your Info</h2>
+            <label class="label-text">Name: </label>
+            <input type="text" name="name" required autocomplete="off"><br><br>
+            <label class="label-text">Age: </label>
+            <input type="number" name="age" required autocomplete="off"><br><br>
+<!--        Email: <input type="email" name="email" required><br><br>-->
+            <label class="label-text">Birthday: </label>
+            <input type="date" name="birthday" required autocomplete="off"><br><br>
+            <label class="label-text">Phone Number: </label>
+            <input type="tel" name="phone" required autocomplete="off"><br><br>
+            <label class="label-text">Instagram Username: </label>
+            <input type="text" name="instagram" required autocomplete="off"><br><br>
+            <label class="label-text">Gender: </label>
+            <select name="gender" required>
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select><br><br>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>
